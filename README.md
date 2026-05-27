@@ -56,7 +56,9 @@ Built as a lightweight native desktop app using Rust + Tauri.
 
 ### Main dashboard
 
-![Routeo main screen](docs/images/main.png)
+<p align="center">
+  <img src="docs/images/main.png" alt="Routeo main screen" width="600"/>
+</p>
 
 ---
 
