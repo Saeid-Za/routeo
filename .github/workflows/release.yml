@@ -95,6 +95,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           projectPath: packages/tauri
+          tauriScript: bunx tauri
           args: --bundles ${{ matrix.bundles }}
           tagName: ${{ env.RELEASE_TAG }}
           releaseName: "Routeo ${{ env.RELEASE_TAG }}"
