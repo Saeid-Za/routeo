@@ -1,0 +1,17 @@
+* {
+	@apply border-border outline-ring/50;
+}
+
+html,
+body {
+	@apply h-full bg-transparent text-foreground font-default antialiased scroll-smooth;
+	font-synthesis: style;
+	text-rendering: optimizeLegibility;
+	/* Prevent HTML having More Height than Body in SSR First Load */
+	min-height: 100%;
+	height: 100%;
+}
+
+body {
+	overflow-x: hidden;
+}

@@ -1,0 +1,47 @@
+{
+	"$schema": "../../node_modules/@tauri-apps/cli/config.schema.json",
+	"productName": "Routeo",
+	"version": "0.1.0",
+	"identifier": "dev.routeo.app",
+	"build": {
+		"frontendDist": "../ui/.output/public",
+		"devUrl": "http://localhost:3000"
+	},
+	"app": {
+		"trayIcon": {
+			"iconPath": "icons/128x128.png",
+			"title": "Routeo"
+		},
+		"windows": [
+			{
+				"label": "main",
+				"decorations": false,
+				"transparent": true,
+				"title": "Routeo",
+				"backgroundColor": "#00000000",
+				"shadow": false,
+				"width": 650,
+				"height": 850,
+				"minWidth": 650,
+				"minHeight": 850,
+				"resizable": true,
+				"fullscreen": false,
+				"center": true
+			}
+		],
+		"security": {
+			"csp": null
+		}
+	},
+	"bundle": {
+		"active": true,
+		"targets": ["deb", "nsis", "msi"],
+		"icon": [
+			"icons/32x32.png",
+			"icons/128x128.png",
+			"icons/128x128@2x.png",
+			"icons/icon.icns",
+			"icons/icon.ico"
+		]
+	}
+}

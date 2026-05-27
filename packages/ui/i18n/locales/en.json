@@ -1,0 +1,53 @@
+{
+	"ok": "Ok",
+	"cancel": "Cancel",
+	"error": "Error",
+	"success": "Success",
+	"warning": "Warning",
+	"server": {
+		"Common": {
+			"UnknownServerError": "Unknown Server Error occured."
+		}
+	},
+	"errors": {
+		"required": "This Field Is Required",
+		"date": "invalid date",
+		"SSN": "SSN Code is invalid",
+		"phoneNumber": "phone number is invalid",
+		"email": "invalid email",
+		"number": "please enter number only",
+		"time": "Input time as \"HH:MM\"",
+		"percentage": "number should be in range (0-100)",
+		"integer": "number could only be an integer",
+		"passwordRepeat": "passwords do not match"
+	},
+	"notify": {
+		"success": {
+			"message": "Operation was done successfuly",
+			"closeAction": "Close",
+			"caption": "Success"
+		},
+		"error": {
+			"message": "Operation encountered error",
+			"closeAction": "Close",
+			"caption": "Error"
+		},
+		"warning": {
+			"message": "Operation encountered warning",
+			"closeAction": "Close",
+			"caption": "Warning"
+		}
+	},
+	"confirm": {
+		"title": "Are your sure?",
+		"message": "If you are sure of your operation, click on the Ok button"
+	},
+	"api": {
+		"connectionError": "Error Connecting to Server",
+		"serverError": "Processing Error in Server"
+	},
+	"select": {
+		"selectedLabel": "Item(s) Selected",
+		"noDataMessage": "No Data was Found"
+	}
+}

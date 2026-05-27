@@ -1,0 +1,32 @@
+# Nuxt dev/build outputs
+.output
+.output.*
+.data
+.nuxt
+.nitro
+.cache
+dist
+dist.*
+.env
+.unlighthouse
+# Node dependencies
+node_modules
+node_modules.*
+package-lock.json
+pnpm-lock.yaml
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.fleet
+.idea
+
+# Scripts
+shell.ts
+
+# Local env files
+.env
+.env.*
+!.env.example

@@ -1,0 +1,65 @@
+<script setup lang="ts">
+import type { CarouselEmits, CarouselProps, WithClassAsProps } from "./interface"
+import { useClass } from "#imports"
+import { useProvideCarousel } from "./useCarousel"
+
+const {
+	orientation: inputOrientation = "horizontal",
+	...props
+} = defineProps<CarouselProps & WithClassAsProps>()
+
+const emits = defineEmits<CarouselEmits>()
+
+const { canScrollNext, canScrollPrev, carouselApi, carouselRef, orientation, scrollNext, scrollPrev } = useProvideCarousel(props, emits)
+
+const className = useClass(
+	"relative",
+	() => props.class,
+)
+
+defineExpose({
+	canScrollNext,
+	canScrollPrev,
+	carouselApi,
+	carouselRef,
+	orientation,
+	scrollNext,
+	scrollPrev,
+})
+
+function onKeyDown(event: KeyboardEvent) {
+	const prevKey = inputOrientation === "vertical" ? "ArrowUp" : "ArrowLeft"
+	const nextKey = inputOrientation === "vertical" ? "ArrowDown" : "ArrowRight"
+
+	if (event.key === prevKey) {
+		event.preventDefault()
+		scrollPrev()
+
+		return
+	}
+
+	if (event.key === nextKey) {
+		event.preventDefault()
+		scrollNext()
+	}
+}
+</script>
+
+<template>
+	<div
+		data-slot="carousel"
+		:class="className"
+		role="region"
+		aria-roledescription="carousel"
+		tabindex="0"
+		@keydown="onKeyDown">
+		<slot
+			:can-scroll-next
+			:can-scroll-prev
+			:carousel-api
+			:carousel-ref
+			:orientation
+			:scroll-next
+			:scroll-prev />
+	</div>
+</template>

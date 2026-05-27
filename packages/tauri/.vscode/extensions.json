@@ -1,0 +1,13 @@
+{
+	"recommendations": [
+		"dariofuzinato.vue-peek",
+		"antfu.iconify",
+		"dbaeumer.vscode-eslint",
+		"oxc.oxc-vscode",
+		"unional.vscode-sort-package-json",
+		"richie5um2.vscode-sort-json",
+		"better-ts-errors.better-ts-errors",
+		"antfu.unocss",
+		"antfu.goto-alias"
+	]
+}

@@ -1,0 +1,53 @@
+{
+	"ok": "قبول",
+	"cancel": "لغو",
+	"error": "خطا",
+	"success": "موفقیت",
+	"warning": "هشدار",
+	"server": {
+		"Common": {
+			"UnknownServerError": "خطایی در سرور رخ داده است."
+		}
+	},
+	"errors": {
+		"required": "این قسمت ضروری است",
+		"date": "تاریخ نا معتبر است",
+		"SSN": "کد ملی صحیح وارد کنید",
+		"phoneNumber": "شماره موبایل صحیح وارد کنید",
+		"email": "ایمیل وارد کنید",
+		"number": "عدد وارد کنید",
+		"time": "HH:MM وارد کنید",
+		"percentage": "عددی بین صفر تا ۱۰۰ وارد کنید",
+		"integer": "عدد صحیح وارد کنید",
+		"passwordRepeat": "گذرواژه یکی نیست"
+	},
+	"notify": {
+		"success": {
+			"message": "عملیات با موفقیت انجام شد",
+			"closeAction": "بستن",
+			"caption": "موفقیت"
+		},
+		"error": {
+			"message": "عملیات با خطا مواجه شد",
+			"closeAction": "بستن",
+			"caption": "خطا"
+		},
+		"warning": {
+			"message": "عملیات با هشدار مواجه شد",
+			"closeAction": "بستن",
+			"caption": "هشداز"
+		}
+	},
+	"confirm": {
+		"title": "آیا از این عملیات اطمینان دارید ؟",
+		"message": "درصورت اطمینان از عملیات خود، بر روی دکمه قبول، کلیک کنید"
+	},
+	"api": {
+		"connectionError": "خطا در ارتباط با سرور",
+		"serverError": "خطا در پردازش سرور"
+	},
+	"select": {
+		"selectedLabel": "آیتم انتخاب شده است",
+		"noDataMessage": "داده ای برای نمایش وجود ندارد !"
+	}
+}

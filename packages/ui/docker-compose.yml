@@ -1,0 +1,11 @@
+version: "3"
+services:
+  mano:
+    build: .
+    image: mano-front
+    ports:
+      - "${PORT}:${PORT}"
+    volumes:
+      - ./.env:/usr/src/app/.env
+    command: bun run start
+    restart: always
