@@ -107,57 +107,33 @@ const progressFormatted = computed(() => (props.progress * 100).toFixed(2))
 		</SectionHeader>
 
 		<div class="px-2 flex flex-row gap-2 items-center">
-			<input
-				v-model="customIpsRaw"
-				type="text"
-				autocomplete="off"
-				placeholder="1.1.1.1, 8.8.8.8"
+			<input v-model="customIpsRaw" type="text" autocomplete="off" placeholder="1.1.1.1, 8.8.8.8"
 				class="text-sm text-foreground px-2 py-1.5 border border-border rounded-md bg-background flex-1 max-w-xs min-w-0 placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
 				@keydown.enter.prevent="submitCustomDns">
 
-			<input
-				v-model="customName"
-				type="text"
-				autocomplete="off"
-				placeholder="Name (Opt)"
+			<input v-model="customName" type="text" autocomplete="off" placeholder="Name (Opt)"
 				class="text-sm text-foreground px-2 py-1.5 border border-border rounded-md bg-background shrink-0 min-w-100px w-28 placeholder:text-muted-foreground focus:outline-none sm:w-36 focus:ring-2 focus:ring-primary/40"
 				@keydown.enter.prevent="submitCustomDns">
 
-			<button
-				type="button"
+			<button type="button"
 				class="p-1.5 border border-border rounded-md bg-muted flex shrink-0 cursor-pointer transition items-center justify-center hover:border-primary/40 hover:bg-primary/15"
-				aria-label="Add custom DNS"
-				@click="submitCustomDns">
-				<Icon
-					name="i-mdi:plus"
-					class="size-5" />
+				aria-label="Add custom DNS" @click="submitCustomDns">
+				<Icon name="i-mdi:plus" class="size-5" />
 			</button>
 		</div>
 
 		<div class="px-2">
-			<input
-				v-model="searchQuery"
-				type="search"
-				autocomplete="off"
-				placeholder="Search by name or IP"
+			<input v-model="searchQuery" type="search" autocomplete="off" placeholder="Search by name or IP"
 				class="text-sm text-foreground px-2 py-1.5 border border-border rounded-md bg-background min-w-0 w-full placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40">
 		</div>
 
-		<div class="mb-2 px-2 flex flex-col gap-2">
-			<p
-				v-if="filteredDns.length === 0"
-				class="text-sm text-muted-foreground py-4 text-center">
+		<div class="mb-2 px-2 gap-2 grid grid-fill-250px">
+			<p v-if="filteredDns.length === 0" class="text-sm text-muted-foreground py-4 text-center">
 				No DNS servers match your search.
 			</p>
 
-			<DnsCard
-				v-for="dns in filteredDns"
-				:key="dnsSelectionKey(dns)"
-				class="w-full"
-				:dns
-				:is-selected="isActiveDns(dns)"
-				:removable="Boolean(dns.customId)"
-				@set-dns="emit('setDns', dns)"
+			<DnsCard v-for="dns in filteredDns" :key="dnsSelectionKey(dns)" class="w-full" :dns
+				:is-selected="isActiveDns(dns)" :removable="Boolean(dns.customId)" @set-dns="emit('setDns', dns)"
 				@remove="emit('removeCustomDns', dns.customId!)" />
 		</div>
 	</div>
