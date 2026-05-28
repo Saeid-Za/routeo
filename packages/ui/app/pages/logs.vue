@@ -25,7 +25,7 @@ function levelLabel(level: string) {
 </script>
 
 <template>
-	<div class="flex grow flex-col w-full">
+	<div class="flex flex-col w-full min-h-full">
 		<div
 			class="px-3 py-2 border-b border-border/50 bg-background/90 flex shrink-0 items-center top-0 justify-between sticky z-1 backdrop-blur-sm">
 			<div class="flex gap-2 items-center">
@@ -60,7 +60,7 @@ function levelLabel(level: string) {
 
 		<div
 			v-else
-			class="flex grow divide-border/30 divide-y">
+			class="flex flex-1 divide-border/30 divide-y">
 			<VList
 				:data="logs"
 				class="w-full">

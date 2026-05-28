@@ -20,10 +20,10 @@
 				"title": "Routeo",
 				"backgroundColor": "#00000000",
 				"shadow": false,
-				"width": 650,
-				"height": 850,
-				"minWidth": 650,
-				"minHeight": 850,
+				"width": 500,
+				"height": 700,
+				"minWidth": 520,
+				"minHeight": 560,
 				"resizable": true,
 				"fullscreen": false,
 				"center": true
@@ -35,7 +35,11 @@
 	},
 	"bundle": {
 		"active": true,
-		"targets": ["deb", "nsis", "msi"],
+		"targets": [
+			"deb",
+			"nsis",
+			"msi"
+		],
 		"icon": [
 			"icons/32x32.png",
 			"icons/128x128.png",

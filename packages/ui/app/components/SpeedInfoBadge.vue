@@ -11,7 +11,7 @@ const humanUploadSpeed = computed(() => `${humanizeBytes(uploadSpeed)}/s`)
 
 <template>
 	<div class="flex gap-1">
-		<div class="text-sm px-2 border rounded-full inline-flex gap-2 items-center">
+		<div class="text-xs px-1.5 py-0.5 border rounded-full inline-flex gap-1 items-center">
 			<div class="text-muted-foreground">
 				Down
 			</div>
@@ -19,7 +19,7 @@ const humanUploadSpeed = computed(() => `${humanizeBytes(uploadSpeed)}/s`)
 			{{ humanDownloadSpeed }}
 		</div>
 
-		<div class="text-sm px-2 border rounded-full inline-flex gap-2 items-center">
+		<div class="text-xs px-1.5 py-0.5 border rounded-full inline-flex gap-1 items-center">
 			<div class="text-muted-foreground">
 				Up
 			</div>

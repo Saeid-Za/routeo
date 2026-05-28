@@ -5,7 +5,7 @@ defineProps<{
 </script>
 
 <template>
-	<div class="text-sm px-2 border rounded-full inline-flex gap-2 items-center">
+	<div class="text-xs px-1.5 py-0.5 border rounded-full inline-flex gap-1 items-center">
 		<div class="text-muted-foreground">
 			DNS
 		</div>

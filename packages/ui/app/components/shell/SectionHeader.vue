@@ -1,5 +1,5 @@
 <template>
-	<div class="text-muted-foreground p-2 flex items-center justify-between">
+	<div class="text-muted-foreground text-sm px-2 py-1 flex items-center justify-between">
 		<span>
 			<slot />
 		</span>
