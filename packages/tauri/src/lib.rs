@@ -23,7 +23,15 @@ pub fn run() {
         .with(tracing_subscriber::fmt::layer()) // optional terminal logs
         .init();
 
-    tauri::Builder::default()
+    let mut builder = tauri::Builder::default();
+
+    #[cfg(desktop)]
+    {
+        builder =
+            builder.plugin(tauri_plugin_window_state::Builder::default().build());
+    }
+
+    builder
         .invoke_handler(tauri::generate_handler![
             network::list_network_interfaces,
             network::test_dns_latency,
@@ -43,10 +51,6 @@ pub fn run() {
             if cfg!(debug_assertions) {
                 window.open_devtools();
             }
-
-            #[cfg(desktop)]
-            app.handle()
-                .plugin(tauri_plugin_window_state::Builder::default().build())?;
 
             Ok(())
         })

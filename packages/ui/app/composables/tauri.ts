@@ -44,26 +44,6 @@ export function useTauri() {
 		return await invoke<void>("stop_network_stream")
 	}
 
-	async function connectWarp() {
-		return await invoke<boolean>("connect_api")
-	}
-
-	async function disconnectWarp() {
-		return await invoke<boolean>("disconnect_api")
-	}
-
-	async function isWarpConnected() {
-		return await invoke<boolean>("is_connected_api")
-	}
-
-	async function registerWarpAccount() {
-		return await invoke<boolean>("register_account_api")
-	}
-
-	async function deleteWarpAccount() {
-		return await invoke<boolean>("delete_account_api")
-	}
-
 	return {
 		networkInterfaces,
 		getInterfaces,
@@ -74,11 +54,6 @@ export function useTauri() {
 		flushDns,
 		startNetworkStream,
 		stopNetworkStream,
-		connectWarp,
-		disconnectWarp,
-		isWarpConnected,
-		registerWarpAccount,
-		deleteWarpAccount,
 	}
 }
 

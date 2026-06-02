@@ -1,7 +1,7 @@
 {
 	"$schema": "../../node_modules/@tauri-apps/cli/config.schema.json",
 	"productName": "Routeo",
-	"version": "0.1.0",
+	"version": "0.1.2",
 	"identifier": "dev.routeo.app",
 	"build": {
 		"frontendDist": "../ui/.output/public",
@@ -26,7 +26,7 @@
 				"minHeight": 560,
 				"resizable": true,
 				"fullscreen": false,
-				"center": true
+				"center": false
 			}
 		],
 		"security": {

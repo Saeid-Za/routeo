@@ -22,7 +22,7 @@
   <img src="https://img.shields.io/badge/Nuxt-4-00DC82?logo=nuxt" alt="Nuxt">
   <img src="https://img.shields.io/badge/Bun-runtime-fbf0df?logo=bun" alt="Bun">
   <img
-  src="https://img.shields.io/badge/version-v0.1.0-7c3aed"
+  src="https://img.shields.io/badge/version-v0.1.2-7c3aed"
   alt="Version"
   />
   <img
@@ -299,6 +299,12 @@ routeo/
 │           ├── commands/
 │           └── logging.rs
 ```
+
+---
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for release notes.
 
 ---
 
